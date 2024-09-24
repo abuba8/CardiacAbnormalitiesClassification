@@ -1,5 +1,7 @@
 # CardiacAbnormalitiesClassification
 
+#### Official Implementation of Paper: https://www.proquest.com/docview/3097796810?pq-origsite=gscholar&fromopenview=true&sourcetype=Scholarly%20Journals
+
 ### Proposed Architecture:
 
 ![alt text](imgs/architecture.png)
@@ -15,7 +17,6 @@ In inception block stacks of 1D convolutional layers followed by batch normaliza
 Lastly, three convolutional blocks were added. In the first stack of convolutional block 1D convolutional layer was added with 128 filters and 5x5 filter size and stride 1x1 followed by an instance normalization layer and parametric relu as activation function. Then a dropout layer was added with a probability of 20 percent and a 1D max pooling layer with filter size 2x2 was added. In the second convolutional block, only the number of filters in the convolutional layer was different than the first stack. In the second stack, 256 filters with 11x11 size were used in 1D convolutional layer. Whereas, in the third stack of the convolutional block we didnt add the 1D pooling layer and used 512 filters with size 21x21 in the convolutional layer.
 
 
-
 ### Results
 
 | Model  | Test Scores - Kaggle |
@@ -26,4 +27,4 @@ Lastly, three convolutional blocks were added. In the first stack of convolution
 | VGG-16  | 34.9  |
 | Resnet-50  | 35.1  |
 | Inception  | 40.6  |
-| Inception-Residual  | 51.3  |
+| Inception-Residual  | 50.87  |
